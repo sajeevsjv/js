@@ -18,3 +18,22 @@ function b(arr){
 }
 b(arr);
 console.log(arr);
+
+
+function outerfunction(){
+    let outervariable="outer function variable";
+    function innerfunction(){
+        console.log(outervariable);
+        function innerfunction1(){
+            console.log(outervariable);
+        }
+        return innerfunction1;
+    }
+    return innerfunction;
+
+}
+let result = outerfunction();
+console.log(result);
+result1= result();
+result2=result1();
+result3=result(2);
