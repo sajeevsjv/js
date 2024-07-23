@@ -34,6 +34,5 @@ function outerfunction(){
 }
 let result = outerfunction();
 console.log(result);
-result1= result();
-result2=result1();
-result3=result(2);
+result1 = result();
+result2 = result1();
