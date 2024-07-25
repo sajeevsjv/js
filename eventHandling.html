@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">button</button>
+    <input type="text" id="text">
+
+
+    <script>
+        let btn = document.getElementById("btn");
+        console.log(btn);
+
+
+        btn.addEventListener ("click",function() {
+            console.log("button click event fired ...")
+        })
+
+
+        btn.addEventListener ("mouseover",function (){
+            console.log("mouseover event fired...")
+
+        })
+
+
+        btn.addEventListener ("mouseout",function (){
+            console.log("mouseout event fired")
+        })
+
+        btn.addEventListener ("mousedown",function (){
+            console.log("mouse down event fired");
+        })
+
+
+        btn.addEventListener ("mouseup",function (){
+            console.log("mouseup event fired");
+        })
+
+
+        btn.addEventListener ("mousemove",function (){
+            console.log("mousemove event fired");
+        })
+
+
+
+        let input = document.getElementById ("text");
+        input.addEventListener ("keydown",function (){
+            console.log("keydown event fired");
+        })
+
+
+        input.addEventListener ("keyup",function (){
+            console.log("keyup event fired");
+        })
+
+        input.addEventListener ("keypress",function (){
+            console.log("keypress event fired");
+        })
+    </script>
+    
+</body>
+</html>
