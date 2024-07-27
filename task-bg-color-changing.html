@@ -6,11 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn"></button>
+    <button id="btn">Button</button>
+    <div id="con">jeeeeeeee</div>
 
 
   <script>
+    let count = 0;
     let btn = document.getElementById ("btn");
+    btn.addEventListener("click",function (){
+      document.body.style.backgroundColor = 'red';
+
+    })
+
+  //   function evenfun (){
+  //   for (let i=0;i<100;i++)
+  //   if(i%2==0){
+  //     let c=i;
+  //   }
+  //   return c;
+  // }
+
+    btn.addEventListener("click",function (){
+      count++;
+      console.log(count);
+      let evenval = evenfun();
+      console.log(evenval);
+      if( count.textContent == 0){
+      document.body.style.backgroundColor = 'green';
+      }
+      else{
+        document.body.style.backgroundColor = 'red';
+ 
+      }
+    })
     
   </script>  
 </body>
