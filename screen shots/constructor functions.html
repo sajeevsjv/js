@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>constructor functions</h2>
+ <script>
+
+    {
+
+    //constructor functions - the function that is used to create a new object
+     function person (name, age){
+        this.name = name;
+        this.age = age;
+        this.greeting = function (){
+            console.log(`Hey, ${name}, you are ${age} year old !`);
+        }
+     }
+     //creating new object person1
+     let person1 = new person("sajeev",20);
+     console.log(person1);
+     person1.greeting ();
+
+     //creating next object
+     let p2 = new person ("abi",10)
+     console.log(p2);
+
+     //updating person1
+     person1.place = "thrissur";
+     console.log("person1 :",person1);
+
+    }
+
+    {
+
+
+     //creating objects using classes
+     class person {
+        name;
+        age;
+        constructor (name,age){
+            this.name = name;
+            this.age = age;
+
+        }
+        greeting = function (){
+            console.log(`heyy, ${name}, your age is ${age}`)
+        }
+     }
+
+     // obj creating
+     let p3 = new person ("sajeev",21);
+     console.log(p3);
+
+    }
+
+
+
+ </script>   
+</body>
+</html>
