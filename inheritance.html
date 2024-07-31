@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>innheritance and method overriding </h2>
+<script>
+    {
+        class animal{
+            name;
+            color;
+            walking (){
+                console.log (`A ${this.color} ${this.name} is walking`);
+            }
+            constructor(name,color){
+                this.name = name;
+                this.color = color;
+            }
+        }
+        let cat = new animal("cat","white");
+        console.log(cat);
+        console.log(cat.name);
+        cat.walking();
+        
+        //inheritance
+        class dog extends animal{
+            color;
+            constructor (name,color, property){
+                super(name,color);
+                this.property = property;
+            }
+            
+            // function overriding
+            walking (){
+                console.log(`a ${this.color} ${this.name} is ${this.property}`);
+            }
+        
+        }
+        let dog1 = new animal ("dog","brown","barking");
+        console.log(dog1.color);
+        console.log(dog1.property);
+        
+        
+    }
+</script>
+</body>
+</html>
