@@ -27,7 +27,7 @@
         
         //inheritance
         class dog extends animal{
-            color;
+            property;
             constructor (name,color, property){
                 super(name,color);
                 this.property = property;
@@ -39,10 +39,10 @@
             }
         
         }
-        let dog1 = new animal ("dog","brown","barking");
+        let dog1 = new dog ("dog","brown","barking");
         console.log(dog1.color);
         console.log(dog1.property);
-        
+        dog1.walking ();
         
     }
 </script>
