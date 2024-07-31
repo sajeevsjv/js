@@ -18,20 +18,20 @@
 
     })
 
-  //   function evenfun (){
-  //   for (let i=0;i<100;i++)
-  //   if(i%2==0){
-  //     let c=i;
-  //   }
-  //   return c;
-  // }
+    function evenfun (i){
+    for (let i=0;i<100;i++)
+    if(i%2==0){
+      
+    }
+    return i;
+   }
 
     btn.addEventListener("click",function (){
       count++;
       console.log(count);
-      let evenval = evenfun();
-      console.log(evenval);
-      if( count.textContent == 0){
+      let c= evenfun ();
+      console.log("c",c);
+      if(count == 2){
       document.body.style.backgroundColor = 'green';
       }
       else{
