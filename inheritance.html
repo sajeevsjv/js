@@ -28,9 +28,15 @@
         //inheritance
         class dog extends animal{
             property;
-            constructor (name,color, property){
-                super(name,color);
+            constructor (name,property){
+                super(name); //to call parent constructor
                 this.property = property;
+            }
+            set color (color){
+                this.color=color;
+            }
+            get color (){
+                return this.color;
             }
             
             // function overriding
@@ -39,11 +45,23 @@
             }
         
         }
-        let dog1 = new dog ("dog","brown","barking");
-        console.log(dog1.color);
+        let dog1 = new dog ("dog","barking");
         console.log(dog1.property);
+        dog1.color="red"; // using set
+        console.log(dog1.color)
         dog1.walking ();
+        console.log("colorr :",dog1.color); //using get
         
+        // new child
+        class goat extends dog {
+            constructor (name,property,color){
+                super(name,property,color);
+            }
+        }
+        let goat1 = new goat("goat","eating","black")
+        goat1.color="black";
+        goat1.walking ();
+        console.log(goat1.property);
     }
 </script>
 </body>
