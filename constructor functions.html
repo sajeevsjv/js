@@ -47,7 +47,7 @@
 
         }
         greeting(){
-            console.log(`heyy, ${name}, your age is ${age}`);
+            console.log(`heyy, ${this.name}, your age is ${this.age}`);
         }
      }
 
@@ -58,14 +58,39 @@
 
     }
 
-
+{
     function animals (name,colour){
         this.name = name;
         this.colour = colour;
-        this.
+        this.msg = function (){
+            console.log(`a ${this.colour} ${this.name}`)
+        }
 
     }
+    let cat = new animals("cat","white") //creating obj from constructor class
+    cat.msg ();
+    
+}
 
+
+{
+    class animals {
+        name;
+        color;
+        property;
+        constructor (name,color,property){
+            this.name = name ;
+            this.color = color ;
+            this.property = property;
+
+        }
+        msg (){
+            console.log (`a ${this.color} ${this.name} is ${this.property}`);
+        }
+    }
+  let dog = new animals ("dog","brown","barking");
+  dog.msg ();
+}
 
 
  </script>   
