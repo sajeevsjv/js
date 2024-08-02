@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>example of all obj oriented methods- get,set,inheritance,this,method overriding,bind</h2>
+    <h4>bind</h4>
+    <p>bind is used to bind current object with parent function, in the case of inheritance</p>
+
+    <script>
+        class Button {
+            button;
+            constructor (content){
+                this.button = document.createElement("button");
+                this.button.innerHTML = content;
+                document.body.appendChild(this.button);
+            }
+
+            set width(width){
+                this.button.style.width = width + "px";
+            }
+            
+            set height(height){
+                this.button.style.height = height + "px";
+
+            }
+            
+            onClick (fn){
+                this.button.onClick = fn;
+            }
+
+        }
+        let btn = new Button ("OKAY");
+        console.log("btn :",btn);
+        btn.height = 40;
+        btn.width = 80;
+        btn.onClick ( function (){
+            console.log("button clicked ...")
+        });
+    </script>
+</body>
+</html>
