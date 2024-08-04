@@ -40,6 +40,27 @@
         btn.onClick ( function (){
             console.log("button clicked ...")
         });
+
+        // task with paragraph
+    {
+        class Para{
+            para;
+            constructor(content){
+                this.para = document.createElement("P");
+                this.para.innerHTML = content;
+                document.body.appendChild(this.para);
+            }
+
+            set lineHeight (lh){
+               this.para.style.lineHeight = lh;
+
+            }
+        }
+        let ln = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.";
+        let p = new Para (ln);
+        p.lh = 2;
+        consol
+    }
     </script>
 </body>
 </html>
