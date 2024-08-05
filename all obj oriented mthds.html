@@ -41,6 +41,24 @@
             console.log("button clicked ...")
         });
 
+        class redButton extends Button{
+            constructor(content){
+                super(content);
+                this.button.style.backgroundColor = "red";
+            }
+
+            onClick (fn){
+                this.button.onClick = function (){
+                    console.log("this:",this);
+                    console.log("this.button",this.button);
+                    this.button.style.backgroundColor = "blue";
+
+                }
+            }
+        }
+
+        let btn1 = new redButton ("blue")
+
         // task with paragraph
     {
         class Para{
