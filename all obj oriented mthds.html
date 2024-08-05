@@ -44,20 +44,26 @@
         class redButton extends Button{
             constructor(content){
                 super(content);
-                this.button.style.backgroundColor = "red";
+                
             }
+        
 
             onClick (fn){
                 this.button.onClick = function (){
                     console.log("this:",this);
                     console.log("this.button",this.button);
-                    this.button.style.backgroundColor = "blue";
+                    this.button.style.background = "blue";
+                    fn();
 
                 }
             }
         }
 
-        let btn1 = new redButton ("blue")
+        let btn1 = new redButton ("cancel")
+        btn1.onClick(function (){
+            console.log("cancel button clicked..")
+        })
+
 
         // task with paragraph
     {
@@ -73,11 +79,24 @@
                this.para.style.lineHeight = lh;
 
             }
+
+            set bgcolor (bgcolor){
+                this.para.style.background = bgcolor;
+            }
+
+            mouseover (fn){
+                this.para.onmouseover = function (){
+                    this.para.style.background = "yellow";
+                    fn ();
+                }
+            }
         }
-        let ln = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.";
+        let ln = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.lor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur, a excepturi atque aliquam fugiat totam distinctio sunt ad rerum.";
         let p = new Para (ln);
-        p.lh = 2;
-        consol
+        p.lineHeight = 2;
+        p.bgcolor = "red";
+        p.
+        
     }
     </script>
 </body>
