@@ -84,7 +84,7 @@
                 this.para.style.background = bgcolor;
             }
 
-            mouseover (fn){
+            onMouseover (fn){
                 this.para.onmouseover = function (){
                     this.para.style.background = "yellow";
                     fn ();
@@ -95,7 +95,9 @@
         let p = new Para (ln);
         p.lineHeight = 2;
         p.bgcolor = "red";
-        p.
+        onMouseover (function(){
+            console.log("mouseover the paragraph")
+        });
         
     }
     </script>
