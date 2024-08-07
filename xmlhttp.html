@@ -1,24 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
     <h2>xmlhttp request sending to server</h2>
-    <button id="btn"></button>
+    <button id="btn">button</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>website</th>
+            </tr>
+        </thead>
+        <tbody id="datacontainer"></tbody>
+    </table>
 
 
     <script>
-        let req = new XMLHttpRequest ();
-        console.log("xmlreq :",req);
-        req.open("get","https://jsonplaceholder.typicode.com/users");
-        let btn =document.getElementById("btn");
-        btn.addEventListener("click",function (){
+        let req = new XMLHttpRequest();
+        console.log("xmlreq :", req);
+        req.open("get", "https://jsonplaceholder.typicode.com/users");
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
             req.send();
-        })
+        });
+        req.onreadystatechange = function () {
+            console.log("readystate", req.readyState);
+
+            if (req.readyState === 4) {
+                console.log("status :", req.status);
+                if (req.status === 200) {
+                    let response = req.response;
+                    console.log("response",response);
+                    console.log("typeof response",typeof(response));
+                    let data = JSON.parse(response);
+                    console.log(data);
+
+                    let datacontainer = document.getElementById("datacontainer");
+                    console.log("datacontainer",datacontainer);
+                    let rows = '';
+                    for(let i=0;i<data.length;i++){
+                        rows = rows + `
+                        <tr>
+                            <td>${data[i].name}</td>
+                              <td>${data[i].username}</td>
+                                <td>${data[i].email}</td>
+                                  <td>${data[i].website}</td>
+                                  </tr>`
+                    }
+                    console.log("rows :",rows);
+                    datacontainer.innerHTML = rows;
+
+                }
+            }
+        }
+
     </script>
-    
+
 </body>
+
 </html>
