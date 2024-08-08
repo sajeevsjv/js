@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+
+    }
+
+    .bgcolor {
+      width: 30vw;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 30vh;
+    }
+
+    button {
+      background-color: rgb(255, 255, 255);
+      height: 5vh;
+      width: 10vw;
+      outline: none;
+      border: none;
+      border-radius: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    h4 {
+      font-size: 80px;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="bgcolor">
     <button id="btn">Button</button>
-    <div id="con">jeeeeeeee</div>
+    <h4 id="colorname"></h4>
+  </div>
+
 
 
   <script>
-    let count = 0;
-    let btn = document.getElementById ("btn");
-    btn.addEventListener("click",function (){
-      document.body.style.backgroundColor = 'red';
 
-    })
+    let arr = ["Red", "Green", "Blue"];
+    let i = 0;
+    let btn = document.getElementById("btn");
+    let colorname = document.getElementById("colorname")
+    btn.addEventListener("click", function colorchange() {
+      document.body.style.background = arr[i];
+      colorname.innerHTML = arr[i];
+      i = (i + 1) % arr.length; // Move to the next color, looping back to 0 when at the end
 
-    function evenfun (i){
-    for (let i=0;i<100;i++)
-    if(i%2==0){
-      
     }
-    return i;
-   }
-
-    btn.addEventListener("click",function (){
-      count++;
-      console.log(count);
-      let c= evenfun ();
-      console.log("c",c);
-      if(count == 2){
-      document.body.style.backgroundColor = 'green';
-      }
-      else{
-        document.body.style.backgroundColor = 'red';
- 
-      }
-    })
-    
-  </script>  
+    );
+  </script>
 </body>
+
 </html>
