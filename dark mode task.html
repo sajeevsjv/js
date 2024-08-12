@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 70%;
+    text-align: justify;
+}
+.hd1{
+    color: blue;
+}
+.hd2{
+    color: rgb(224, 146, 0);
+}
+.hd3{
+    color: rgb(255, 0, 0);
+}
+h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(0, 233, 50);
+}
+button{
+    padding: 8px;
+    border-radius: 20px;
+    width: 100px;
+    font-size: 14px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <span><button id="btn">Toggle</button></span>
+        </div>
+       <h2 class="hd1">Lorem, ipsum.</h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem officia libero laboriosam fugiat vel officiis hic magnam id quaerat. Quas voluptatem illo modi adipisci natus voluptate dolorem nisi earum est? Aliquid, modi delectus. Tempora perspiciatis asperiores quis sint nobis accusamus, nulla doloribus eos autem reprehenderit ducimus officia ut obcaecati eligendi dolor repellat eius officiis ad molestiae? Molestiae in ullam rem explicabo quisquam ea, accusamus totam rerum placeat sapiente blanditiis inventore officia voluptate eius. Accusamus eos tempore a molestias corrupti dolore earum, enim saepe, doloribus alias sunt corporis, placeat non consequatur magni quasi quos blanditiis quam doloremque veniam iusto laudantium quas.
+       </p>
+       <h2 class="hd2">Lorem, ipsum.</h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem officia libero laboriosam fugiat vel officiis hic magnam id quaerat. Quas voluptatem illo modi adipisci natus voluptate dolorem nisi earum est? Aliquid, modi delectus. Tempora perspiciatis asperiores quis sint nobis accusamus, nulla doloribus eos autem reprehenderit ducimus officia ut obcaecati eligendi dolor repellat eius officiis ad molestiae? Molestiae in ullam rem explicabo quisquam ea, accusamus totam rerum placeat sapiente blanditiis inventore officia voluptate eius. Accusamus eos tempore a molestias corrupti dolore earum, enim saepe, doloribus alias sunt corporis, placeat non consequatur magni quasi quos blanditiis quam doloremque veniam iusto laudantium quas.
+       </p>
+       <h2 class="hd3">Lorem, ipsum.</h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem officia libero laboriosam fugiat vel officiis hic magnam id quaerat. Quas voluptatem illo modi adipisci natus voluptate dolorem nisi earum est? Aliquid, modi delectus. Tempora perspiciatis asperiores quis sint nobis accusamus, nulla doloribus eos autem reprehenderit ducimus officia ut obcaecati eligendi dolor repellat eius officiis ad molestiae? Molestiae in ullam rem explicabo quisquam ea, accusamus totam rerum placeat sapiente blanditiis inventore officia voluptate eius. Accusamus eos tempore a molestias corrupti dolore earum, enim saepe, doloribus alias sunt corporis, placeat non consequatur magni quasi quos blanditiis quam doloremque veniam iusto laudantium quas.
+       </p>
+    </div>
+    
+
+
+    <script>
+        let btn = document.getElementById("btn")
+       
+        
+        btn.addEventListener("click",function (){
+            document.body.backgroundColor = "white";
+            if(document.body.style.backgroundColor =="white"){
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        }
+        else{
+            document.body.style.background = "white";
+            document.body.style.color = "black";
+        }
+        })
+    </script>
+</body>
+</html>

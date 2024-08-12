@@ -10,14 +10,77 @@
     <div class="container">
     <div class="box">
         <h3>First Counter</h3>
-        <h1 id="h1"></h1>
+        <h1 id="h1">0</h1>
         <div class="buttons">
-            <button>Decrease</button>
-            <button>Reset</button>
-            <button>Increase</button>
+            <button id="decrease">Decrease</button>
+            <button id="reset">Reset</button>
+            <button id="increase">Increase</button>
         </div>
     </div>
+
+    <div class="box">
+        <h3>Second Counter</h3>
+        <h1 id="h11">0</h1>
+        <div class="buttons">
+            <button id="decrease1">Decrease</button>
+            <button id="reset1">Reset</button>
+            <button id="increase1">Increase</button>
+        </div>
     </div>
+</div>
+ 
     
+ <script>
+{
+    let h1 = document.getElementById("h1");
+    let count = 0;
+    let decrease = document.getElementById("decrease");
+    decrease.addEventListener("click",function(){
+       count--;
+       h1.innerHTML = count;                                                                                                    
+        
+    })
+    
+    let reset = document.getElementById("reset");
+    reset.addEventListener("click",function (){
+        count = 0;
+        h1.innerHTML = count;
+    })
+
+    let increase = document.getElementById("increase");
+    increase.addEventListener("click",function (){
+        count++;
+        h1.innerHTML = count;
+        
+    })
+    
+}
+{
+
+    let h1 = document.getElementById("h11");
+    let count = 0;
+    let decrease = document.getElementById("decrease1");
+    decrease.addEventListener("click",function(){
+       count--;
+       h1.innerHTML = count;                                                                                                    
+        
+    })
+    
+    let reset = document.getElementById("reset1");
+    reset.addEventListener("click",function (){
+        count = 0;
+        h1.innerHTML = count;
+    })
+
+    let increase = document.getElementById("increase1");
+    increase.addEventListener("click",function (){
+        count++;
+        h1.innerHTML = count;
+        
+    })
+}
+
+
+ </script>
 </body>
 </html>

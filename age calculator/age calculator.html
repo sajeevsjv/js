@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="date-container">
+        <div class="date">
+            <h2>AGE CALCULATOR</h2>
+            <span>
+                <h4 id="curntdt"></h4>
+            </span>
+            <div>
+                <p>Enter your age in dd-mm-yyyy format.</p>
+                <input type="date" id="yr">
+                <button onclick="age()">AGE</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let result;
+        let dt = new Date();
+        let dtonly = (dt.getDate());
+        let curntyr = (dt.getFullYear());
+        let input = document.getElementById("yr");
+        let h4 = document.getElementById("curntdt");
+        h4.innerHTML = "TODAY " + dt.toLocaleDateString();
+        input.addEventListener("change", function () {
+            let k = input.value;
+            let b = new Date(k);
+            let ageyr = (b.getFullYear());
+            result = curntyr - ageyr;
+            console.log("result :", result);
+        });
+        function age() {
+            alert(`heyy bruh, you are ${result} years old !`);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
