@@ -46,8 +46,19 @@
     function finduserbyid2 (id){
         return new promise((resolve,reject) => {
             let user = data.find(data => data.id == id);
+            setTimeout(() => {
+                if(user){
+                    resolve(user);
+                }
+                else{
+                    reject("user not found");
+                }
+                
+            }, 1000);
         })
     }
+
+    finduserbyid2 (10)
 
     </script>
     
