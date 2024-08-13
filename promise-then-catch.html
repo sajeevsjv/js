@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>using promise in order to overcome the problem of execution in asynchronus code</h2>
+
+
+    <script>
+        let data = [
+            {
+                id:1,
+                name:"jhon",
+                age:10
+            },
+            {
+                id:2,
+                name:"jane",
+                age:12
+            }
+        ]
+
+    console.log("data:",data);
+    
+    function finduserbyid (id){
+        let user = data.find(data => data.id === id);
+        return user;
+    }
+
+    let result = finduserbyid(1);
+    console.log("result:",result);
+
+    function finduserbyid1 (id){
+        let user = data.find(data => data.id === id);
+        setTimeout(() =>{
+            return user;
+        },1000);
+    }
+
+    let result1 = finduserbyid1(2);
+    console.log("result1:",result1);
+
+    function finduserbyid2 (id){
+        return new promise((resolve,reject) => {
+            let user = data.find(data => data.id == id);
+        })
+    }
+
+    </script>
+    
+</body>
+</html>
