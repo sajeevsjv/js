@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            background-color: burlywood;
+            height: 50vh;
+            width: 50vw;
+            margin-top: 50px;
+        }
+        .container_options{
+            margin-top: 8%;
+        }
+        .numberr{
+            height: 40px;
+            width: 35%;
+            margin-left: 20px;
+        }
+        #hopt_opt1,#hopt_opt2{
+            height: 45px;
+            width: 20%;
+            margin-left: 50px;
+        }
+        .output{
+            margin:auto;
+            background-color: cornflowerblue;
+            height: 15vh;
+            width: 50%;
+            margin-top: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">height converter</h1>
+        <div class="container_options">
+            <input type="number" name="number" id="input_num" class="numberr" placeholder="enter range">
+            <select name="height_options" id="hopt_opt1"onchange="convert()">
+                <option value="select">--select--</option>
+                <option value="miles">miles</option>
+                <option value="cm">centimeters</option>
+                <option value="meters">meters</option>
+                <option value="km">kilometers</option>
+                <option value="inch">inches</option>
+            </select>
+            <select name="height_options" id="hopt_opt2" onchange="convert()">
+                <option value="select">--select--</option>
+                <option value="miles">miles</option>
+                <option value="cm">centimeters</option>
+                <option value="meters">meters</option>
+                <option value="km">kilometers</option>
+                <option value="inch">inches</option>
+            </select>
+            
+        </div>
+        <div class="output">
+            <h1 align="center" id="output"></h1>
+        </div>
+    </div>
+    <script src="./converter.js"></script>
+</body>
+</html>

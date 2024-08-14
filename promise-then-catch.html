@@ -43,8 +43,8 @@
     let result1 = finduserbyid1(2);
     console.log("result1:",result1);
 
-    function finduserbyid2 (id){
-        return new promise((resolve,reject) => {
+    function finduserbyid2 (id){    
+        return new Promise((resolve,reject) => {
             let user = data.find(data => data.id == id);
             setTimeout(() => {
                 if(user){
@@ -58,7 +58,15 @@
         })
     }
 
-    finduserbyid2 (10)
+    finduserbyid2(10)
+    .then((user) =>{
+        console.log("finduserbyid2",user);
+    })
+    .catch((message) =>{
+        console.log("message",message); 
+    })
+
+    console.log("remaining code");
 
     </script>
     
