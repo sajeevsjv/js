@@ -38,6 +38,9 @@
     width: 70% !important;
 
 }
+.border-top-0{
+    min-height: 24vh;
+}
 
 /*** Button Start ***/
 .btn {

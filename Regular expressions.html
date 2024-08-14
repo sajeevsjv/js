@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h2, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Regular Expressions</h2>
+
+    <script>
+        const a = "something went  wrong";
+        const c = "Not found"
+        const b = `try again
+        try better`;
+
+        const regexp1 = /w/;
+        const result1 = regexp1.test(a);
+        console.log("result1",result1); //true
+
+        const regexp2 = /A/i;
+        const result2 = regexp2.test(b);
+        console.log("result2",result2); //true
+
+        const regexp3 = /[tra]g/;
+        const result3 = regexp3.test(b);
+        console.log("result3",result3); //true
+
+        const regexp4 =  /[a-z]n/i;
+        const result4 = regexp4.test(c);
+        console.log("result4",result4); //true
+
+        const regexp5 = /[a-z0-9]o/;
+        const result5 = regexp5.test(c);
+        console.log("result5",result5); //true
+
+        const regexp6 = /^try/i;
+        const result6 = regexp6.test(b);
+        console.log("result6",result6); //true
+
+        const regexp7 = /in$/i;
+        const result7 = regexp7.test(b);
+        console.log("result7",result7); //true
+
+        const regexp8 = /^try/im;
+        const result8 = regexp8.test(b);
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
