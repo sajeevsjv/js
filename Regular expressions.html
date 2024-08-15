@@ -40,10 +40,26 @@
 
         const regexp7 = /in$/i;
         const result7 = regexp7.test(b);
-        console.log("result7",result7); //true
+        console.log("result7",result7); //false
 
         const regexp8 = /^try/im;
         const result8 = regexp8.test(b);
+        console.log("result8",result8); //true
+
+
+
+
+
+
+        const str = "lolly";
+        // {} - indicates the no of characters, a{2} means "aa, ie 2a is required.
+
+        const regexp9 = /L{2}y$/i; // 'o' shoud be exactly after 2 L's and 'o' should be the end character.
+        const result9 = regexp9.test(str);
+        console.log("result9",result9);
+
+        const str1 = "lolllly"
+        const regexp10 = /L{2,4}
 
 
 
