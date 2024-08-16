@@ -18,6 +18,7 @@ req.onreadystatechange = function () {
         let description = document.getElementsByClassName("description");
         let category = document.getElementsByClassName("category");
         let price = document.getElementsByClassName("price");
+        let imageFirstcarosel =document.getElementsByClassName("imageFirstcarosel");
 
 
         //title
@@ -44,6 +45,11 @@ req.onreadystatechange = function () {
         //price 
         for (let i = 0; i < price.length && i < data.length; i++){
             price[i].innerHTML = data[i].price + " $"
+        }
+        
+        // img for carosel
+        for (let i = 0; i < imageFirstcarosel.length && i < data.length; i++) {
+            imageFirstcarosel[i].src = (data[i].image);
         }
 
 
