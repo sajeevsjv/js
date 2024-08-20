@@ -1,9 +1,9 @@
 let req = new XMLHttpRequest();
 console.log(req);
+req.open("get", "https://fakestoreapi.com/products");
 
 
 function loaddata() {
-    req.open("get", "https://fakestoreapi.com/products");
     req.send();
     req.onreadystatechange = function () {
         console.log("readystate :", req.readyState);
@@ -12,8 +12,12 @@ function loaddata() {
             let response = req.response;
             let result = JSON.parse(response);
             console.log(result);
+            let mensclothing = result.filter(i =>i.category === "men's clothing");
+            console.log("mensclothing",mensclothing);
             let tab1 = document.getElementById("tab1-data");
             let carousel = document.getElementById("carousel");
+            let mens = document.getElementById("mensclothing");
+            let mensdata = '';
             let carousaldata = '';
             let datas = '';
             for(let i=0;i<result.length;i++){
@@ -40,6 +44,8 @@ function loaddata() {
                                         </div>`
 
            
+
+           
             }
             tab1.innerHTML = datas;
             carousaldata = `
@@ -57,6 +63,32 @@ function loaddata() {
                             
             
             carousel.innerHTML = carousaldata;
+
+            for( let i = 0; i < mensclothing.length; i++){
+                mensdata = mensdata + `
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src=${mensclothing[i].image} onclick = "handleclick(${mensclothing[i].id})" 
+                                                        class="img-fluid w-100 rounded-top image" alt="">
+                                                </div>
+                                                <div class="category text-white bg-secondary px-3 py-1 rounded position-absolute"
+                                                    style="top: 10px; left: 10px;">${mensclothing[i].category}</div>
+                                                <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4 class="title">${mensclothing[i].title.slice(0,17)+".."}</h4>
+                                                    <p class="description">${mensclothing[i].description.slice(0,120)+".."}</p>
+                                                    <div class="d-flex justify-content-between  flex-lg-wrap">
+                                                        <p class="price text-dark fs-5 fw-bold mb-0">${mensclothing[i].price+" $"}</p>
+                                                        <a href="#"
+                                                            class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>`
+            }
+            mens.innerHTML = mensdata;
         }
 
 

@@ -45,7 +45,7 @@
 
 }
 .border-top-0{
-    height: 39vh;
+    min-height: 56%;
 }
 
 /*** Button Start ***/
