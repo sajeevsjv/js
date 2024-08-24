@@ -7,22 +7,26 @@ const server = http.createServer((req,res)=>{
     const req_url = req.url;
     console.log("req_url",req_url);
 
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // res.setHeader('Access-Control-Allow-Origin', '*');
     
     const parsed_url = url.parse(req_url);
-    if(parsed_url.pathname === "/json"){
+    if(parsed_url.pathname === "/datas"){
         res.writeHead(200,{'content-type':'text/json'});
         res.end(fs.readFileSync('./user.json'));
 
     }
 
-    else if (parsed_url.pathname === "/html") {
+    else if (parsed_url.pathname === "/") {
         res.writeHead(200, { 'content-type': 'text/html' });
         res.end(fs.readFileSync('./index.html'));
     } 
-    else if (parsed_url.pathname === "/css") {
+    else if (parsed_url.pathname === "/style.css") {
         res.writeHead(200, { 'content-type': 'text/css' });
         res.end(fs.readFileSync('./style.css'));
+    } 
+    else if (parsed_url.pathname === "/script.js") {
+        res.writeHead(200, { 'content-type': 'text/script' });
+        res.end(fs.readFileSync('./script.js'));
     } 
 });
 
