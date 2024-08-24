@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    background-color: aqua;
+    padding: 20px;
+    
+}
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,24vw);
+    grid-auto-rows: 40vh;
+    padding-left: 5%;
+    padding-top: 4%;
+   
+    width: 100%;
+    justify-content: center;
+
+}
+
+.box{
+    height: 80%;
+    width: 20vw;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 8px;
+
+}
+
+img{
+    width: 100px;
+}
