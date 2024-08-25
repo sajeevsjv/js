@@ -28,6 +28,10 @@ const server = http.createServer((req,res)=>{
         res.writeHead(200, { 'content-type': 'text/script' });
         res.end(fs.readFileSync('./script.js'));
     } 
+    else if (parsed_url.pathname === "/viewpage.html") {
+        res.writeHead(200, { 'content-type': 'text/html' });
+        res.end(fs.readFileSync('./viewpage.html'));
+    } 
 });
 
 server.listen(PORT, '127.0.0.1',()=>{

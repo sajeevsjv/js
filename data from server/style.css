@@ -21,8 +21,8 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-size: 18px;
-    color: rgb(83, 83, 83);
+    font-size: 14px;
+    color: rgb(0, 0, 0);
     font-weight: 500;
     border-bottom: 1px solid transparent;
 }
@@ -33,7 +33,6 @@ nav a:hover{
 .container {
     display: grid;
     grid-template-columns: repeat(4, 20%);
-    padding-top: 4%;
     gap: 40px;
     width: 100%;
     justify-content: center;
@@ -41,7 +40,7 @@ nav a:hover{
 }
 
 .box {
-    border: 2px solid rgb(235, 235, 235);
+    border: 1px solid rgba(255, 0, 0,0.3);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -49,11 +48,52 @@ nav a:hover{
     gap: 8px;
 
 }
+.box span,p{
+    font-weight: 400;
+}
 
 .box:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 img {
-    width: 40%;
+    width: 100%;
+    border-radius: 5px;
+}
+.hd{
+    padding-left: 6%;
+    font-size: 28px;
+    font-weight: bolder;
+    margin: 30px 0px 20px 0px;
+}
+.hd span{
+    font-size: 32px;
+    font-weight: 700;
+    color: gray;
+    border-bottom: 3px solid red;
+}
+
+/* viewpage */
+.section{
+    display: flex;
+    margin: auto;
+    gap: 15px;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid rgb(253, 68, 68);
+    margin-top: 3%;
+    height: 40%;
+    padding: 20px;
+    
+}
+
+h4{
+    font-size: 28px;
+    font-weight: 500;
+}
+h5{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: gray;
 }
